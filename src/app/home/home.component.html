@@ -1,0 +1,38 @@
+<div *ngIf="!selectedGame">
+  <header>SUPPORTED GAMES</header>
+  <nav>
+    <ul id="supportedgames" *ngIf="supportedGames">
+     <li *ngFor="let game of supportedGames.games">
+            <app-supportedgame [game]="game" (notify)="onNotify($event)"></app-supportedgame>
+      </li>
+    </ul>
+  </nav>
+  <header>MY CHALLENGES</header>
+  <nav>
+    <ul id="mycurrentgames"  *ngIf="currentChallenges">
+        <li *ngFor="let challenge of currentChallenges.challenges">
+          <ul>
+            <li><img src="{{challenge.game.iconurl}}"/></li>
+            <li *ngIf="challenge.status == 'COMPLETED'">
+              <div *ngIf="challenge.winnercreator == (challenge.creator == currentUser.username)" class="checkbox-yes"></div>
+              <div *ngIf="challenge.winnercreator != (challenge.creator == currentUser.username)" class="checkbox-no"></div>
+            </li>
+            <li>{{challenge.status}}</li>
+            <li>{{challenge.name}}</li>
+            <li>{{challenge.private.username}}</li>
+            <li>{{challenge.private.email}}</li>
+            <li>{{challenge.private.password}}</li>
+            <li>
+                <button *ngIf="challenge.status == 'WAITING' && challenge.creator != currentUser.username" (click)="accept(challenge.id)">Accept</button>
+                <button *ngIf="challenge.status == 'WAITING' && challenge.creator != currentUser.username" (click)="decline(challenge.id)">Decline</button>
+                <button *ngIf="challenge.status == 'WAITING' && challenge.creator == currentUser.username" (click)="decline(challenge.id)">Cancel</button>
+                <button *ngIf="challenge.status == 'STARTED'" (click)="terminate(challenge.id)">Done!</button>
+            </li>
+          </ul> 
+      </li>
+    </ul>
+  </nav>
+</div>
+<div *ngIf="selectedGame">
+  <app-challengeeditor [game]="selectedGame" (notify)="onNotifyCancel($event)"></app-challengeeditor>
+</div>

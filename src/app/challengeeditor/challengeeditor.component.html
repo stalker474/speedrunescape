@@ -1,0 +1,31 @@
+
+<div *ngIf="game && !challenge">
+  <header>Creating {{game.name}} challenge</header>
+  <nav>
+    <ul id="supportedChallenges">
+     <li *ngFor="let challenge of game.challenges">
+        <button (click)="selectChallenge(challenge)">
+            <label>{{challenge.name}}</label>  
+            <img src="{{challenge.iconurl}}"/> 
+        </button>
+    </li>
+    </ul>
+  </nav>
+</div>
+<div *ngIf="game && challenge && !validatedOpponent">
+<input [(ngModel)]="opponent" placeholder="search">
+<button (click)="findOpponent(opponent)">Search</button>
+</div>
+<div *ngIf="game && challenge && validatedOpponent && !validatedChallenge">
+  <p>
+    Do you wish to create a "{{challenge.name}}" challenge with {{opponent}}?
+  </p>
+  <button (click)="validate()">Validate</button>
+</div>
+<div *ngIf="game && challenge && validatedOpponent && validatedChallenge">
+  <p>
+        Challenge awaiting confirmation!
+  </p>
+</div>
+{{answer.result}}
+<button (click)="return()">Back</button>

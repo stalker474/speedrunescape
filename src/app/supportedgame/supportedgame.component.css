@@ -1,0 +1,53 @@
+.checkbox-yes
+{ 
+   background:url(http://icons.iconarchive.com/icons/visualpharm/must-have/128/Check-icon.png) left top; 
+   height:32px;
+   width : 32px;
+   background-repeat: no-repeat;
+   background-size : 32px 32px;
+}
+
+.checkbox-no
+{ 
+   background:url(http://icons.iconarchive.com/icons/ampeross/qetto-2/128/no-icon.png) left top; 
+   height:32px;
+   width : 32px;
+   background-repeat: no-repeat;
+   background-size : 32px 32px;
+}
+
+.options-list
+{
+    list-style-type: none;
+    padding : 0;
+}
+
+.options-list label
+{
+    font-size : 25px;
+    height: 32px;
+    display: inline-block;
+}
+
+.options-list span
+{
+    float : right;
+}
+
+img
+{
+   margin-left : 20px;
+   height : 55px;
+}
+
+li
+{
+    border-top : solid 1px;
+}
+
+button
+{
+    float: right;
+    font-size: 25px;
+    height: 59px;
+}

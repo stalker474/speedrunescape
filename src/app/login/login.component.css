@@ -1,0 +1,14 @@
+input, button, span {
+    display : block;
+    margin : 5px auto;
+    font-size : 30px;
+    text-align : center;
+}
+
+button {
+    height : 50px;
+}
+
+span {
+    color : red;
+}

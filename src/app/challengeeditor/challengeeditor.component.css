@@ -1,0 +1,38 @@
+img {
+    width : 32px;
+    height : 32px;
+}
+
+header
+{
+    font-size: 35px;
+    color: white;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+#supportedChallenges {
+    padding : 0;
+}
+
+#supportedChallenges li {
+    margin-left : 10%;
+    margin-right : 10%;
+}
+
+#supportedChallenges li button {
+    width : 100%;
+}
+
+#supportedChallenges li label {
+    float : left;
+    font-size : 17px;
+    font-weight : bold;
+}
+
+#supportedChallenges li img {
+    float : right;
+}

@@ -1,0 +1,23 @@
+<div *ngIf="game">
+  <img src="{{game.iconurl}}"/>
+  <button [ngClass]="showDetails?'btn-on':'btn-off'" (click)="toggleDetails()">Details</button>
+  <button (click)="newChallenge()">Create</button>
+<nav *ngIf="showDetails">
+  <ul class="options-list">
+    <li><label>Hiscores : </label><span [ngClass]="game.supportshiscores?'checkbox-yes':'checkbox-no'"></span></li>
+    <li><label>Play time : </label><span [ngClass]="game.supportsplaytime?'checkbox-yes':'checkbox-no'"></span></li>
+    <li><label>Anti pay2Win : </label><span [ngClass]="game.supportsantipay2win?'checkbox-yes':'checkbox-no'"></span></li>
+    <li><label>Anti Coop : </label><span [ngClass]="game.supportsanticoop?'checkbox-yes':'checkbox-no'"></span></li>
+    <li><label>Questing : </label><span [ngClass]="game.supportsquests?'checkbox-yes':'checkbox-no'"></span></li>
+    <li><label>Account creation : </label><span [ngClass]="game.supportsautoaccount?'checkbox-yes':'checkbox-no'"></span></li>
+    <li><label>Anti Cheat : </label><span [ngClass]="game.supportsanticheat?'checkbox-yes':'checkbox-no'"></span></li>
+  </ul>
+</nav>
+</div>
+<!--
+  website: string;
+  playlink: string;
+  iconurl: string;
+  quests: string[];
+  stats: Stat[];
+-->
