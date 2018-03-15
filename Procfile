@@ -1,1 +1,1 @@
-web: npm start
+web: ng serve --port 5000
