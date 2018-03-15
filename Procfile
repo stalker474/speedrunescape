@@ -1,1 +1,1 @@
-web: ng serve --port 5000
+web: ng serve --port 5000 --host 0.0.0.0
