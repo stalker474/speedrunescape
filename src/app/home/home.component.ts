@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
      this.loginService.getSupportedGames().subscribe(u => this.supportedGames = u);
-     let timer = Observable.timer(0,1000);
+     let timer = Observable.timer(0,5000);
     timer.subscribe(t=> this.refreshList());
     this.currentUser = this.userDataService.getUser();
   }
