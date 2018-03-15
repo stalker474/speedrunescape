@@ -107,13 +107,13 @@ export class LoginService {
     return this.http.post(this.challengeTerminateWS,JSON.stringify(accept));
   }
 
-  authenticateWS = "http://speedrunescape.cleverapps.io/authenticate";
-  createUserWS = "http://speedrunescape.cleverapps.io/createuser";
-  supportedGamesWS = "http://speedrunescape.cleverapps.io/supportedgames";
-  findUserWS = "http://speedrunescape.cleverapps.io/finduser";
-  createChallengeWS = "http://speedrunescape.cleverapps.io/newchallenge";
-  myCurrentChallengesWS = "http://speedrunescape.cleverapps.io/mychallenges";
-  challengeAcceptWS = "http://speedrunescape.cleverapps.io/accept";
-  challengeDeclineWS = "http://speedrunescape.cleverapps.io/decline";
-  challengeTerminateWS = "http://speedrunescape.cleverapps.io/terminate";
+  authenticateWS = "https://speedrunescape.cleverapps.io/authenticate";
+  createUserWS = "https://speedrunescape.cleverapps.io/createuser";
+  supportedGamesWS = "https://speedrunescape.cleverapps.io/supportedgames";
+  findUserWS = "https://speedrunescape.cleverapps.io/finduser";
+  createChallengeWS = "https://speedrunescape.cleverapps.io/newchallenge";
+  myCurrentChallengesWS = "https://speedrunescape.cleverapps.io/mychallenges";
+  challengeAcceptWS = "https://speedrunescape.cleverapps.io/accept";
+  challengeDeclineWS = "https://speedrunescape.cleverapps.io/decline";
+  challengeTerminateWS = "https://speedrunescape.cleverapps.io/terminate";
 }
