@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { User } from './user';
 import { UserdataService } from './services/userdata.service';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +10,7 @@ import { UserdataService } from './services/userdata.service';
 })
 
 export class AppComponent {
-  constructor(private userDataService: UserdataService) { }
-
-  isConnected() {
-    return this.userDataService.getUser().connected;
+  constructor(public auth: AuthService) {
+    auth.handleAuthentication();
   }
 }

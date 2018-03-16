@@ -1,5 +1,9 @@
-<input [(ngModel)]="user.username" placeholder="name">
-<input [(ngModel)]="user.password" placeholder="password">
-<button (click)="authUser()">Login</button>
-<button (click)="createUser()">New user</button>
-<span>{{answer.result}}</span>
+
+<div *ngIf="!authService.isAuthenticated()">
+    <button (click)="authUser()">Login</button>
+    <span>{{answer.result}}</span>  
+</div>
+<div *ngIf="authService.isAuthenticated()">
+    <button (click)="logout()">Logout</button>
+</div>
+
